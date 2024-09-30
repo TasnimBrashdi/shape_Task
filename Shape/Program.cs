@@ -19,8 +19,6 @@
     {
         protected double lentgh;
         protected double width;
-        protected double r;
-        protected double hieght;
 
 
         public virtual double area() { 
@@ -38,6 +36,7 @@
         }
      public override double area()
         {
+          
             return lentgh*lentgh;
         }
     }
@@ -45,11 +44,11 @@
     
      public circle(double r)
         {
-            this.r = r;
+            this.lentgh = r;
         }
         public override double area()
         {
-            return Math.PI*(r* r);
+            return Math.PI*(lentgh* lentgh);
         }
 
     }
@@ -58,12 +57,12 @@
         public tringle(double length,double hieght)
         {
             this.lentgh=length;
-            this.hieght=hieght;
+            this.width=hieght;
 
         }
         public override double area()
         {
-            return (1.0/2) * lentgh * hieght;
+            return (1.0/2) * lentgh * width;
         }
     }
     public class rectangle :shape {
